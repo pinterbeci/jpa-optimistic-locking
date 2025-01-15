@@ -1,5 +1,14 @@
 package hu.udinfopark.optimistic.lock;
 
+import hu.udinfopark.jpa.optimistic.test.JpaOptimisticLockingApplication;
+import hu.udinfopark.jpa.optimistic.test.repository.OptimisticRepository;
+import hu.udinfopark.jpa.optimistic.test.repository.entity.Optimistic;
+import hu.udinfopark.jpa.optimistic.test.service.OptimisticService;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
 import java.time.Instant;
 import java.util.UUID;
 import java.util.concurrent.Callable;
@@ -7,18 +16,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import hu.udinfopark.jpa.optimistic.test.JpaOptimisticTest;
-import hu.udinfopark.jpa.optimistic.test.repository.OptimisticRepository;
-import hu.udinfopark.jpa.optimistic.test.repository.entity.Optimistic;
-import hu.udinfopark.jpa.optimistic.test.service.OptimisticService;
-
-@SpringBootTest(classes = JpaOptimisticTest.class)
-class OptimisticLockTest {
+@SpringBootTest(classes = JpaOptimisticLockingApplication.class)
+class JpaOptimisticLockingTest {
 
     @Autowired
     private OptimisticService optimisticService;
