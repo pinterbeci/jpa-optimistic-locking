@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JpaOptimisticTest {
+public class JpaOptimisticLockingApplication {
     public static void main(String[] args) {
-        SpringApplication.run(JpaOptimisticTest.class, args);
+        SpringApplication.run(JpaOptimisticLockingApplication.class, args);
     }
 }
