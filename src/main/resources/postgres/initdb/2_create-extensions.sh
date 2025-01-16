@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# LF line separator, windows-on sir a Docker
+
 psql -v ON_ERROR_STOP=1 --username postgres -d optimistic_db  <<-EOSQL
      create extension if not exists "uuid-ossp";
 EOSQL
