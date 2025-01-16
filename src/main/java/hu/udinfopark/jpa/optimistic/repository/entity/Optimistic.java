@@ -1,4 +1,4 @@
-package hu.udinfopark.jpa.optimistic.test.repository.entity;
+package hu.udinfopark.jpa.optimistic.repository.entity;
 
 import hu.udinfopark.common.backend.core.repository.entity.BaseEntity;
 import lombok.Getter;
@@ -19,4 +19,7 @@ public class Optimistic extends BaseEntity {
 
     @Column(name = "description")
     private String descripton;
+
+    @Column(name = "is_deleted")
+    private boolean isDeleted;
 }
