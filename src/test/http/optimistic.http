@@ -1,0 +1,40 @@
+### List optimistics
+GET http://localhost:8080/api/optimistic
+Accept: application/json
+
+### Find optimistic by id
+GET http://localhost:8080/api/optimistic/1
+Accept: application/json
+
+### Not found
+GET http://localhost:8080/api/optimistic/sushah-55a5a-aadas5-aa
+Accept: application/json, application/problem+json
+
+### Create optimistic
+POST http://localhost:8080/api/optimistic
+Content-Type: application/json
+Accept: application/json
+
+{
+  "description": "optimistic create from rest"
+}
+
+### Validation error
+POST http://localhost:8080/api/optimistic
+Content-Type: application/json
+Accept: application/json
+
+{
+}
+
+### optimistic employee
+PUT http://localhost:8080/api/optimistic/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "description": "optimistic update from rest"
+}
+
+### Delete optimistic
+DELETE http://localhost:8080/api/optimistic//soft-delete
