@@ -32,7 +32,6 @@ public class TestcontainersConfiguration {
     }
 
     @Bean
-    @ServiceConnection
     public DataSource dataSource(@Autowired final PostgreSQLContainer<?> postgreSQLContainer) {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
