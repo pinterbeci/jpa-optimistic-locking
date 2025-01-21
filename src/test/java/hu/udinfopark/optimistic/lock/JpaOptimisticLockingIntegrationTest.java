@@ -40,7 +40,6 @@ class JpaOptimisticLockingIntegrationTest {
 
         final Optimistic optimistic = new Optimistic();
         optimistic.setDescripton("description-01");
-        optimistic.setVersion(1L);
         optimistic.setCreatorId(userId);
         optimistic.setModifierId(userId);
         optimistic.setCreatedAt(creationDate);

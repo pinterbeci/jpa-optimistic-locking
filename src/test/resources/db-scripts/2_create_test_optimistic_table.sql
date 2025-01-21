@@ -4,7 +4,7 @@ create table if not exists optimistic
     id            varchar      not null unique default uuid_generate_v4(),
     description   varchar,
     is_deleted    boolean      default false,
-    version       numeric      default 0,
+    version       numeric      default 1,
     modifier_id   varchar      not null,
     last_modified timestamp(6) not null default current_timestamp(6),
     creator_id    varchar      not null,
