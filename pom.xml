@@ -14,6 +14,7 @@
     <name>optimistic-locking</name>
     <properties>
         <java.version>17</java.version>
+        <ud.common.backend.version>3.1.0-SNAPSHOT</ud.common.backend.version>
     </properties>
     <dependencies>
         <dependency>
@@ -58,12 +59,12 @@
         <dependency>
             <groupId>hu.udinfopark</groupId>
             <artifactId>ud-common-backend-api</artifactId>
-            <version>3.0.1-SNAPSHOT</version>
+            <version>${ud.common.backend.version}</version>
         </dependency>
         <dependency>
             <groupId>hu.udinfopark</groupId>
             <artifactId>ud-common-backend-core</artifactId>
-            <version>3.0.1-SNAPSHOT</version>
+            <version>${ud.common.backend.version}</version>
         </dependency>
     </dependencies>
 
